@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<deployment-descriptor xsi:schemaLocation="http://www.jboss.org/jbpm deployment-descriptor.xsd"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <runtime-strategy>PER_PROCESS_INSTANCE</runtime-strategy>
+    <event-listeners/>
+    <task-event-listeners/>
+    <globals/>
+    <work-item-handlers>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>
+                new com.mario.bpm.sample.workitem.FindPersonWorkItemHandler(ksession)
+            </identifier>
+            <parameters/>
+            <name>FindPersonWorkItemHandler</name>
+        </work-item-handler>
+    </work-item-handlers>
+    <environment-entries>
+        <environment-entry>
+            <resolver>mvel</resolver>
+            <identifier>
+                new com.mario.bpm.sample.workitem.EntityManagerFactoryCreator().create("jbpmapp",classLoader)
+            </identifier>
+            <parameters/>
+            <name>etlEntityManagerFactory</name>
+        </environment-entry>
+    </environment-entries>
+    <configurations/>
+    <required-roles/>
+</deployment-descriptor>

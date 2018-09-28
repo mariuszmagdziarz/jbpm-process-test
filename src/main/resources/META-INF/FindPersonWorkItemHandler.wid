@@ -1,0 +1,11 @@
+import org.drools.core.process.core.datatype.impl.type.StringDataType;
+[
+    [
+        "name" : "FindPersonWorkItemHandler",
+        "displayName" : "FindPersonWorkItemHandler",
+        "icon" : "green.png",
+        "parameters" : [
+            "message" : new StringDataType();
+        ]
+    ]
+]

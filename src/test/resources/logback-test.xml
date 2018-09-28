@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true">
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%t] %-5p %logger %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+
+    <!--<logger name="org.jbpm" level="debug"/>-->
+    <!--<logger name="org.drools" level="debug"/>-->
+    <!--<logger name="org.jbpm.test" level="debug"/>-->
+
+    <logger name="com.mario.bpm.sample" level="debug"/>
+
+    <logger name="org.hibernate" level="info"/>
+    <logger name="org.hibernate.SQL" level="debug"/>
+</configuration>

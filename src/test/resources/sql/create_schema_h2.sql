@@ -1,0 +1,14 @@
+-- SQL for H2 database
+
+CREATE TABLE person (
+  ID                         BIGINT       NOT NULL,
+  NAME                       VARCHAR(100) NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+CREATE UNIQUE INDEX PERSON_NAME_IDX
+  ON person (NAME);
+
+CREATE SEQUENCE PERSON_SEQ
+  START WITH 1000
+  INCREMENT BY 1;
