@@ -6,7 +6,7 @@
 
     <groupId>com.mario.bpm.sample</groupId>
     <artifactId>sample-process</artifactId>
-    <version>0.0.22-SNAPSHOT</version>
+    <version>0.0.24-SNAPSHOT</version>
 
     <packaging>kjar</packaging>
     <name>BPM Sample Process</name>
