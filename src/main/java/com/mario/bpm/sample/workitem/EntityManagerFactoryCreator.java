@@ -1,9 +1,9 @@
 package com.mario.bpm.sample.workitem;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jbpm.runtime.manager.impl.jpa.EntityManagerFactoryManager;
 
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 @Slf4j
 public class EntityManagerFactoryCreator {
@@ -15,7 +15,7 @@ public class EntityManagerFactoryCreator {
     log.debug("Creating entity manager factory for persistenceName={}", persistenceName);
     try {
       Thread.currentThread().setContextClassLoader(classLoader);
-      entityManagerFactory = EntityManagerFactoryManager.get().getOrCreate(persistenceName);
+      entityManagerFactory = Persistence.createEntityManagerFactory(persistenceName);
     } finally {
       Thread.currentThread().setContextClassLoader(contextClassLoader);
     }
